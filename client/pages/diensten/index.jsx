@@ -7,6 +7,7 @@ export default function Diensten() {
     <section className={styles.services}>
       <div className="container">
         <h1>Diensten</h1>
+        <h3>To do:</h3>
         <p>Garantie</p>
         <p>Inkopen</p>
         <p>Auto importeren</p>
