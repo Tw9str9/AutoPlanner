@@ -295,8 +295,10 @@ footer .footer-bottom {
 }
 footer .footer-bottom .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 footer .footer-bottom .container .contact-info {
   display: flex;
@@ -305,23 +307,38 @@ footer .footer-bottom .container .contact-info {
   justify-content: center;
   gap: 1rem;
 }
-footer .footer-bottom .container h1 {
+footer .footer-bottom .container .contact-info h1 {
   color: var(--c-neutral-50);
 }
-footer .footer-bottom .container h1 span {
+footer .footer-bottom .container .contact-info h1 span {
   color: var(--c-primary-600);
 }
-footer .footer-bottom .container :where(a, p) {
+footer .footer-bottom .container .contact-info :where(a, p) {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
 }
-footer .footer-bottom .container :where(a, p) svg {
+footer .footer-bottom .container .contact-info :where(a, p) svg {
   transition: 0.3s;
 }
-footer .footer-bottom .container :where(a, p):hover svg {
+footer .footer-bottom .container .contact-info :where(a, p):hover svg {
   transform: scale(1.1);
   color: var(--c-primary-600);
+}
+footer .footer-bottom .container .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+}
+footer .footer-bottom .container .col ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 /* End Footer */
