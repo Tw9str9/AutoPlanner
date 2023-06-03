@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+
+.sidebar {
+  width: 100px;
+  height: 100%;
+  background-color: var(--c-secondary-100);
+  padding: 0.5rem;
+  position: fixed;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.sidebar:hover {
+  width: 12rem;
+}
+.sidebar > div {
+  color: var(--c-primary-600);
+}
+.sidebar ul span {
+  color: var(--c-neutral-400);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  display: block;
+  padding-bottom: 20px;
+}
+.sidebar ul li {
+  padding-left: 1rem;
+  padding-bottom: 10px;
+  transition: 0.3s;
+}
+.sidebar:hover ul li {
+  padding-left: 0px;
+}
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: var(--font-s);
+  width: 12rem;
+  color: var(--c-secondary-700);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.sidebar:hover a {
+  width: 100%;
+}
+.sidebar ul li a:hover {
+  background-color: var(--c-secondary-300);
+  color: var(--c-secondary-900);
+}
+.sidebar ul li a svg {
+  font-size: var(--font-m);
+  transition: 0.3s;
+}
+.sidebar ul li a p {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.sidebar:hover ul li a p {
+  visibility: visible;
+  opacity: 1;
+}
+.sidebar ul li:last-of-type {
+  padding-top: 40px;
+}
+.sidebar ul li:last-of-type a {
+  color: var(--c-primary-800);
+}

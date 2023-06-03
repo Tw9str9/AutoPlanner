@@ -1,0 +1,96 @@
+/* Start Hero */
+.hero {
+  position: relative;
+  display: grid;
+  place-content: center;
+  min-height: calc(100vh - 112px);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 480px;
+  text-shadow: 2px 2px 4px var(--c-neutral-900);
+}
+.heroContent h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  color: var(--c-neutral-50);
+  text-transform: none;
+}
+.heroContent h1 span {
+  color: var(--c-primary-600);
+  text-decoration: underline;
+}
+.heroContent h2 {
+  color: var(--c-neutral-100);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.heroContent h2 span {
+  color: var(--c-primary-600);
+}
+.heroContent a {
+  padding: 0.75rem 1rem;
+  font-size: var(--font-s);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--c-neutral-50);
+  background: var(--c-primary-600);
+  border-radius: 4px;
+  text-shadow: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.heroContent a:hover {
+  background-color: var(--c-primary-700);
+}
+/* End Hero */
+/* Start Cars */
+.listings {
+  padding: var(--section-p);
+  color: var(--c-neutral-900);
+}
+.cars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+/* End Cars */
+/* Start Services */
+.services {
+  padding: var(--section-p);
+}
+.services div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--c-neutral-50);
+}
+.services a {
+  flex: 0 0 20%;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--c-secondary-700);
+  border-bottom: 5px solid var(--c-primary-600);
+}
+/* End Services */
+/* Start Reviews */
+.reviews {
+  padding: var(--section-p);
+}
+/* End Reviews */
+/* Start Gallery */
+.gallery {
+  padding: var(--section-p);
+}
+/* End Gallery */
