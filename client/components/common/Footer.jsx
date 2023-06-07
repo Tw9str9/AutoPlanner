@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ContactInfo from "../widgets/ContactInfo";
 import Link from "next/link";
+import Social from "../widgets/Social";
 
 export default function Footer() {
   return (
@@ -70,6 +71,10 @@ export default function Footer() {
                 <Link href="/diensten#importeren">Auto Importeren</Link>
               </li>
             </ul>
+          </div>
+          <div className="social col">
+            <h2>Socials</h2>
+            <Social />
           </div>
         </div>
       </div>

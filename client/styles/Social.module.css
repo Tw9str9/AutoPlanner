@@ -1,0 +1,20 @@
+.social {
+}
+.social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.social li a svg {
+  transition: 0.3s;
+}
+.social li:first-child a svg {
+  color: var(--c-facebook);
+}
+.social li:last-child a svg {
+  color: var(--c-instagram);
+}
+.social li a:hover svg {
+  transform: scale(1.1);
+}
