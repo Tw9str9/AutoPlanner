@@ -9,7 +9,17 @@ import {
 } from "@mui/icons-material/";
 
 export default function Car({
-  car: { imagesPath, make, model, price, year, fuel, transmission, km },
+  carData: {
+    imagesPath,
+    make,
+    model,
+    price,
+    year,
+    fuel,
+    transmission,
+    km,
+    sold,
+  },
 }) {
   // Price + KM Options
   const priceOptions = {
@@ -28,7 +38,19 @@ export default function Car({
   return (
     <Link className={styles.car} href="">
       <div className={styles.imgContainer}>
-        <Image src={`/assets/imgs/${imagesPath[0]}`} alt="test" fill />
+        {sold && (
+          <Image
+            src="/verkocht-stamp.png"
+            alt="verkocht"
+            fill
+            style={{ zIndex: 2, objectFit: "contain" }}
+          />
+        )}
+        <Image
+          src={`/assets/imgs/${imagesPath[0]}`}
+          alt={`${make} ${model}`}
+          fill
+        />
       </div>
       <div className={styles.info}>
         <div className={styles.infoRow}>

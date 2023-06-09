@@ -22,7 +22,7 @@ export default function Footer() {
               <Image src="/erkend.png" alt="erkend" fill />
             </div>
             <div className="img-container">
-              <Image src="/nap.png" alt="nap" fill />
+              <Image src="/nap-logo.png" alt="nap" fill />
             </div>
           </div>
         </div>

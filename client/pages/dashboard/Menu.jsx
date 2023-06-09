@@ -43,7 +43,7 @@ export default function Menu({ setActive }) {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/">
             <HomeOutlined />
             <p>Homepagina</p>
           </a>

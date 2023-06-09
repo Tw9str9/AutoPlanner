@@ -1,3 +1,11 @@
 .cars {
   padding: var(--section-p);
+  color: var(--c-neutral-900);
+}
+.carsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }
