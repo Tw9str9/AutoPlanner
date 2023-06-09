@@ -4,13 +4,15 @@ const { join } = require("path");
 const fs = require("fs");
 
 const getCars = async (req, res) => {
-  Car.find({}, (err, data) => {
-    if (err) {
-      res.status(500).send("Error retrieving data from database");
-    } else {
-      res.status(200).send(data);
-    }
-  });
+  try {
+    const cars = await Car.find();
+
+    res.json(cars);
+  } catch (error) {
+    console.error("Error fetching cars:", error);
+
+    res.status(500).json({ error: "Failed to fetch cars" });
+  }
 };
 
 const getCar = async (req, res) => {
@@ -27,27 +29,67 @@ const getCar = async (req, res) => {
 };
 
 const addCar = async (req, res) => {
-  const { make, model, km, year, fuel, price, transmission, description } =
-    req.body;
-  const imagesPath = req.files.map((file) => file.filename);
-
-  const car = new Car({
+  const {
+    plate,
+    price,
     make,
     model,
-    km,
     year,
-    fuel,
-    price,
+    km,
     transmission,
-    description,
+    color,
+    body,
+    fuel,
+    power,
+    firstReg,
+    doors,
+    seats,
+    energyLabel,
+    load,
+    motor,
+    cylinders,
+    weight,
+    emission,
+    btw,
+    apk,
+    photos,
+    desc,
+  } = req.body;
+  const imagesPath = req.files?.map((file) => file.filename);
+
+  const car = new Car({
+    plate,
+    price,
+    make,
+    model,
+    year,
+    km,
+    transmission,
+    color,
+    body,
+    fuel,
+    power,
+    firstReg,
+    doors,
+    seats,
+    energyLabel,
+    load,
+    motor,
+    cylinders,
+    weight,
+    emission,
+    btw,
+    apk,
+    photos,
+    desc,
     imagesPath,
   });
-
+  console.log(req.body);
   try {
     await car.save();
     res.status(201).json({ success: true, message: "Car saved" });
   } catch (err) {
-    req.files.forEach((file) => {
+    req.files?.forEach((file) => {
       fs.unlinkSync(file.path);
     });
     res.status(500).json({ message: err.message });

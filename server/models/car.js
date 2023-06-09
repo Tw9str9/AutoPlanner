@@ -2,6 +2,14 @@ const mongoose = require("mongoose");
 
 const carSchema = new mongoose.Schema(
   {
+    plate: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
     make: {
       type: String,
       required: true,
@@ -10,19 +18,11 @@ const carSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    km: {
-      type: Number,
-      required: true,
-    },
     year: {
       type: Number,
       required: true,
     },
-    fuel: {
-      type: String,
-      required: true,
-    },
-    price: {
+    km: {
       type: Number,
       required: true,
     },
@@ -30,7 +30,67 @@ const carSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    description: {
+    color: {
+      type: String,
+      required: true,
+    },
+    body: {
+      type: String,
+      required: true,
+    },
+    fuel: {
+      type: String,
+      required: true,
+    },
+    power: {
+      type: String,
+      required: true,
+    },
+    firstReg: {
+      type: String,
+      required: true,
+    },
+    doors: {
+      type: String,
+      required: true,
+    },
+    seats: {
+      type: String,
+      required: true,
+    },
+    energyLabel: {
+      type: String,
+      required: true,
+    },
+    load: {
+      type: String,
+      required: true,
+    },
+    motor: {
+      type: String,
+      required: true,
+    },
+    cylinders: {
+      type: String,
+      required: true,
+    },
+    weight: {
+      type: String,
+      required: true,
+    },
+    emission: {
+      type: String,
+      required: true,
+    },
+    btw: {
+      type: String,
+      required: true,
+    },
+    apk: {
+      type: String,
+      required: true,
+    },
+    desc: {
       type: String,
       required: true,
     },
@@ -51,12 +111,14 @@ const carSchema = new mongoose.Schema(
 );
 
 carSchema.pre("save", function (next) {
-  this.slug = generateSlug(this.make, this.model);
+  this.slug = generateSlug(this.make, this.model, this.year, this.km);
   next();
 });
 
-function generateSlug(make, model) {
-  const slug = `${make} ${model}`.toLowerCase().replace(/\s+/g, "-");
+function generateSlug(make, model, year, km) {
+  const slug = `${make} ${model} ${year} ${km}`
+    .toLowerCase()
+    .replace(/\s+/g, "-");
   return slug;
 }
 

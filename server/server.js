@@ -4,13 +4,34 @@ const multer = require("multer");
 const cors = require("cors");
 const helmet = require("helmet");
 const { createSeedUser, login } = require("./controllers/auth");
+const { addCar } = require("./controllers/cars");
 require("dotenv").config();
+const carRoutes = require("./routes/getCars");
 
+// Middleware
 const app = express();
 app.use(cors());
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
+
+// Storage
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "../client/public/assets/imgs");
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}-${file.originalname.replace(/\s/g, "-")}`);
+  },
+});
+
+const upload = multer({ storage });
+
+// Cars
+app.post("/api/car/add", upload.array("images"), addCar);
+
+app.use("/api/cars", carRoutes);
 
 // Auth
 app.post("/api/login", login);

@@ -8,39 +8,55 @@ import {
   Settings,
 } from "@mui/icons-material/";
 
-export default function Car() {
+export default function Car({
+  car: { imagesPath, make, model, price, year, fuel, transmission, km },
+}) {
+  // Price + KM Options
+  const priceOptions = {
+    style: "currency",
+    currency: "EUR",
+    minimumFractionDigits: 0,
+  };
+
+  const kmOptions = {
+    style: "decimal",
+    minimumFractionDigits: 0,
+  };
+
+  const formatter = new Intl.NumberFormat("nl-NL", kmOptions);
+
   return (
     <Link className={styles.car} href="">
       <div className={styles.imgContainer}>
-        <Image src="/background-1.jpg" alt="test" fill />
+        <Image src={`/assets/imgs/${imagesPath[0]}`} alt="test" fill />
       </div>
       <div className={styles.info}>
         <div className={styles.infoRow}>
-          <h2>Car Make</h2>
+          <h2>{make}</h2>
           <span>
-            <h3>$2000</h3>
+            <h3>{price.toLocaleString("nl-NL", priceOptions) + ",-"}</h3>
           </span>
         </div>
         <div className={styles.infoRow}>
-          <p>New test</p>
+          <p>{model}</p>
           <span>
             <CalendarMonth />
-            2004
+            {year}
           </span>
         </div>
       </div>
       <div className={styles.specs}>
         <span>
           <LocalGasStation />
-          Benzine
+          {fuel}
         </span>
         <span>
           <Settings />
-          Handgeschakeld
+          {transmission}
         </span>
         <span>
           <Speed />
-          244000km
+          {formatter.format(km) + " km"}
         </span>
       </div>
     </Link>

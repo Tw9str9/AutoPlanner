@@ -90,6 +90,97 @@
 /* Start Content */
 /* End Content */
 /* Start Cars */
+.addCar {
+  padding: 2rem 0;
+}
+.addCar > div > button {
+  display: grid;
+  place-content: center;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  color: var(--c-primary-600);
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.addCar > div > button:hover {
+  color: var(--c-primary-700);
+}
+.addCar > div > button svg {
+  font-size: var(--font-xl);
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+.form > div:not(:nth-child(9), :last-of-type) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 0 0 100%;
+}
+@media (max-width: 767px) {
+  .form > div {
+    flex-wrap: wrap;
+  }
+}
+.form > div div,
+.form > div:where(:nth-child(9), :last-of-type) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 0.25rem;
+}
+.plate {
+  position: relative;
+}
+.plate button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 42px;
+}
+.form > div :where(input, textarea) {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: var(--font-s);
+  color: var(--c-neutral-800);
+  background-color: var(--c-secondary-100);
+  border: 1px solid var(--c-neutral-300);
+  font-family: "Oswald", sans-serif;
+}
+.form div :where(input, textarea):focus {
+  outline-color: var(--c-primary-600);
+}
+.form div textarea {
+  resize: none;
+  height: 24rem;
+}
+.form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  font-size: var(--font-s);
+  border: none;
+  border-radius: 4px;
+  color: var(--c-neutral-50);
+  background: var(--c-primary-600);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form button:hover {
+  background-color: var(--c-primary-700);
+}
 /* End Cars */
 /* Start Reviews */
 /* End Reviews */
