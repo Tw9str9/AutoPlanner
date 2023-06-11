@@ -1,4 +1,4 @@
-import Form from "./Form";
+import Form from "@/components/dashboard/Form";
 import { ArrowBack } from "@mui/icons-material";
 import styles from "@/styles/Dashboard.module.css";
 import { useRouter } from "next/router";

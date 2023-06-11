@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ManageCars from "./ManageCars";
-import ManageContent from "./ManageContent";
-import ManagePhotos from "./ManagePhotos";
-import ManageReviews from "./ManageReviews";
-import Menu from "./Menu";
+import ManageCars from "@/components/dashboard/ManageCars";
+import ManageContent from "@/components/dashboard/ManageContent";
+import ManagePhotos from "@/components/dashboard/ManagePhotos";
+import ManageReviews from "@/components/dashboard/ManageReviews";
+import Menu from "@/components/dashboard/Menu";
 import styles from "@/styles/Dashboard.module.css";
 
 export default function Dashboard({ carList }) {
