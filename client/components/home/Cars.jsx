@@ -1,6 +1,8 @@
 import Car from "../widgets/Car";
-import styles from "@/styles/Home.module.css";
 import Slider from "../widgets/Slider";
+import Link from "next/link";
+import styles from "@/styles/Home.module.css";
+import Social from "../widgets/Social";
 
 export default function Cars({ carList }) {
   return (
@@ -13,6 +15,9 @@ export default function Cars({ carList }) {
               <Car key={i} carData={carData} />
             ))}
           </Slider>
+        </div>
+        <div className={styles.btn}>
+          <Link href="/occasions">collectie bekijken</Link>
         </div>
       </div>
     </section>

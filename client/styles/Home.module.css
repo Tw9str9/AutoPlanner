@@ -64,6 +64,28 @@
   justify-content: flex-start;
   gap: 1rem;
 }
+.btn {
+  display: grid;
+  place-content: center;
+  margin-top: 2rem;
+}
+.btn > a {
+  padding: 0.75rem 1rem;
+  font-size: var(--font-s);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--c-neutral-50);
+  background: var(--c-primary-600);
+  border-radius: 4px;
+  text-shadow: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn > a:hover {
+  background-color: var(--c-primary-700);
+}
 /* End Cars */
 /* Start Services */
 .services {
