@@ -160,9 +160,9 @@ export default function CarDetails({
             </div>
           </div>
         </div>
-        <div>
-          <span>Beschrijving: </span>
-          <span>{desc}</span>
+        <div className={styles.desc}>
+          <h2>Beschrijving</h2>
+          <p>{desc}</p>
         </div>
       </div>
     </section>

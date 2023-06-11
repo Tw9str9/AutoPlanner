@@ -40,6 +40,7 @@
 }
 .title {
   margin: 0;
+  font-weight: 400;
 }
 .carInfoRow {
   display: flex;
@@ -62,7 +63,7 @@
 }
 .price {
   font-size: var(--font-xl);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--c-primary-600);
   padding: 1rem;
 }
@@ -82,4 +83,10 @@
 }
 .carInfo > div span:first-child {
   font-weight: 600;
+}
+.desc h2 {
+  padding: 1rem 0;
+}
+.desc p {
+  white-space: pre-wrap;
 }
