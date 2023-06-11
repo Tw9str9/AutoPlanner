@@ -33,7 +33,7 @@ export default function Footer() {
             <h1>
               Auto<span>Planner</span> NL
             </h1>
-            <ContactInfo whatsapp email />
+            <ContactInfo time address whatsapp email />
           </div>
           <div className="links col">
             <h2>Links</h2>

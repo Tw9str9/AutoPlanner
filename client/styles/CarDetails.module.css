@@ -8,14 +8,14 @@
   align-items: flex-start;
   gap: 1rem;
 }
-.sliderContainer {
+.leftCol {
   flex: 0 0 calc(64% - 1rem);
 }
 @media (max-width: 991px) {
   .row {
     flex-direction: column;
   }
-  .sliderContainer {
+  .leftCol {
     width: 100%;
   }
 }
@@ -23,6 +23,7 @@
   position: relative;
   aspect-ratio: 16/9;
   flex: 0 0 100%;
+  border-radius: 4px;
   scroll-snap-align: start;
   overflow: hidden;
 }
@@ -31,11 +32,59 @@
   margin-top: 0.25rem;
 }
 .thumbs .imgContainer {
-  flex: 0 0 calc(100% / 4);
-  border-radius: 4px;
+  flex: 0 0 calc(25% - 0.75rem / 4);
+}
+@media (max-width: 991px) {
+  .thumbs .imgContainer {
+    flex: 0 0 calc(100% / 3 - 0.5rem / 3);
+  }
 }
 .imgContainer img {
   object-fit: cover;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+.contact > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  color: var(--c-primary-600);
+  border: 1px solid var(--c-primary-600);
+  font-size: clamp(var(--font-s), 4vw, var(--font-m));
+  border-radius: 0.25rem;
+  width: 100%;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+}
+.contact > a:nth-child(2) {
+  background-color: #25d366;
+  color: var(--c-neutral-50);
+  border: none;
+}
+.contact > a:last-child {
+  background-color: var(--c-primary-600);
+  color: var(--c-neutral-50);
+  border: none;
+}
+.contact > a:hover {
+  box-shadow: inset 0px 0px 64px 24px rgba(0, 0, 0, 0.1);
+}
+.contact > a svg {
+  transition: 0.3s;
+}
+.contact > a:hover svg {
+  transform: scale(1.2);
+}
+.contact > a svg {
+  font-size: clamp(var(--font-m), 4vw, var(--font-l));
 }
 .carInfoCol {
   flex: 0 0 36%;
@@ -48,6 +97,7 @@
 .title {
   margin: 0;
   font-weight: 400;
+  font-size: clamp(var(--font-l), 3vw, var(--font-xl));
 }
 .carInfoRow {
   display: flex;
@@ -69,7 +119,7 @@
   }
 }
 .price {
-  font-size: var(--font-xl);
+  font-size: clamp(var(--font-m), 4vw, var(--font-xl));
   font-weight: 600;
   color: var(--c-primary-600);
   padding: 1rem;
@@ -91,11 +141,23 @@
 .carInfo > div span:first-child {
   font-weight: 600;
 }
-.desc h2 {
+.desc {
   padding: 1rem 0;
 }
 .desc p {
   white-space: pre-wrap;
   font-weight: 300;
-  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+.location h2:last-of-type {
+  padding: 1rem 0;
+}
+.location iframe {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .desc,
+  .location {
+    width: calc(64% - 1rem);
+  }
 }

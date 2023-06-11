@@ -1,0 +1,100 @@
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+  color: var(--c-neutral-900);
+}
+/* Start Breadcrumb */
+.panel > div:first-child nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.panel > div:first-child nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.panel > div:first-child nav ul li > :where(button, a) {
+  display: grid;
+  place-content: center;
+}
+.panel > div:first-child nav ul li > button {
+  padding: 0 0.25rem;
+  background: none;
+  border: none;
+  border-right: 1px solid var(--c-neutral-200);
+  cursor: pointer;
+  color: var(--c-primary-600);
+}
+.panel > div:first-child nav ul li svg {
+  transition: 0.3s;
+}
+.panel > div:first-child nav ul li:hover svg {
+  transform: scale(1.1);
+}
+.panel > div:first-child nav ul li:not(:first-child):not(:last-child),
+.panel > div:first-child nav ul svg:not(:last-of-type) {
+  color: var(--c-primary-600);
+  transition: 0.3s;
+}
+.panel > div:first-child nav ul li:not(:first-child):not(:last-child):hover {
+  color: var(--c-primary-700);
+  text-decoration: underline;
+}
+/* End Breadcrumb */
+/* Start Filter */
+.filter {
+  position: relative;
+  padding: 0.5rem;
+  z-index: 5;
+  cursor: pointer;
+}
+.filter > div {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.filter > div svg,
+.filter > div:hover {
+  color: var(--c-primary-600);
+}
+.filter ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 176px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--c-secondary-100);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.filter:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+.filter ul li {
+  width: 100%;
+  color: var(--c-neutral-900);
+  transition: 0.3s;
+}
+.filter ul li:hover {
+  background-color: var(--c-primary-600);
+  color: var(--c-neutral-50);
+}
+.filter ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+/* End Filter */

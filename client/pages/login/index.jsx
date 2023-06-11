@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "@/styles/Login.module.css";
+import Panel from "@/components/widgets/Panel";
 
 export default function Login() {
   const router = useRouter();
@@ -36,6 +37,7 @@ export default function Login() {
   return (
     <section className={styles.login}>
       <div className="container">
+        <Panel />
         <h1>Dashboard</h1>
         <div className={styles.form}>
           <p>Inloggen</p>

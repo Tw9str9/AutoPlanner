@@ -1,5 +1,6 @@
 import ContactInfo from "@/components/widgets/ContactInfo";
 import SendIcon from "@mui/icons-material/Send";
+import Panel from "@/components/widgets/Panel";
 import Map from "@/components/widgets/Map";
 import styles from "@/styles/Contact.module.css";
 
@@ -11,11 +12,12 @@ export default function Contact() {
   return (
     <section className={styles.conactPage}>
       <div className="container">
+        <Panel />
         <h1>Contact opnemen</h1>
         <div className={styles.contact}>
           <div className={styles.contactCol}>
             <h2>Contactgegevens</h2>
-            <ContactInfo whatsapp email />
+            <ContactInfo time address whatsapp email />
             <p>Bezichtiging uitsluitend op telefonische afspraak</p>
             <Map />
           </div>

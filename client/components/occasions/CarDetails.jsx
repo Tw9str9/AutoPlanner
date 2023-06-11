@@ -1,7 +1,9 @@
+import Panel from "@/components/widgets/Panel";
 import Slider from "@/components/widgets/Slider";
+import ContactInfo from "@/components/widgets/ContactInfo";
 import Map from "@/components/widgets/Map";
-import styles from "@/styles/CarDetails.module.css";
 import Image from "next/image";
+import styles from "@/styles/CarDetails.module.css";
 import {
   CalendarMonth,
   LocalGasStation,
@@ -54,8 +56,9 @@ export default function CarDetails({
   return (
     <section className={styles.carDetails}>
       <div className="container">
+        <Panel />
         <div className={styles.row}>
-          <div className={styles.sliderContainer}>
+          <div className={styles.leftCol}>
             <div>
               <Slider>
                 {imagesPath.map((img) => (
@@ -81,6 +84,9 @@ export default function CarDetails({
                   </div>
                 ))}
               </Slider>
+            </div>
+            <div className={styles.contact}>
+              <ContactInfo whatsapp email />
             </div>
           </div>
           <div className={styles.carInfoCol}>
@@ -179,6 +185,10 @@ export default function CarDetails({
         <div className={styles.desc}>
           <h2>Beschrijving</h2>
           <p>{desc}</p>
+        </div>
+        <div className={styles.location}>
+          <h2>Locatie</h2>
+          <Map />
         </div>
       </div>
     </section>

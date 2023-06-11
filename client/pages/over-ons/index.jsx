@@ -1,9 +1,11 @@
+import Panel from "@/components/widgets/Panel";
 import styles from "@/styles/About.module.css";
 
 export default function About() {
   return (
     <section className={styles.about}>
       <div className="container">
+        <Panel />
         <h1>Over ons</h1>
         <p>
           AutoPlanner NL is een merkonafhankelijk autobedrijf in Ter Aar en

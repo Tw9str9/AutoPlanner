@@ -17,7 +17,7 @@ export default function Header() {
     <header>
       <div className="header-top">
         <div className="container">
-          <ContactInfo />
+          <ContactInfo time address />
         </div>
       </div>
       <div className="header-bottom">
