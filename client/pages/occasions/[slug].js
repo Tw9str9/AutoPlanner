@@ -1,4 +1,4 @@
-import CarDetails from "./CarDetails";
+import CarDetails from "@/components/occasions/CarDetails";
 
 export default function CarDetailsPage({ car }) {
   return <CarDetails car={car} />;

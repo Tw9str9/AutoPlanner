@@ -95,7 +95,7 @@ export default function CarDetails({
             <div className={styles.carInfo}>
               <div>
                 <span>Kenteken: </span>
-                <span>{plate && plate}</span>
+                <span>{plate}</span>
               </div>
               <div>
                 <span>Model: </span>
