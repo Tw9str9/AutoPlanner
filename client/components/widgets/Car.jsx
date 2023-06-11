@@ -10,6 +10,7 @@ import {
 
 export default function Car({
   carData: {
+    slug,
     imagesPath,
     make,
     model,
@@ -36,7 +37,7 @@ export default function Car({
   const formatter = new Intl.NumberFormat("nl-NL", kmOptions);
 
   return (
-    <Link className={styles.car} href="">
+    <Link className={styles.car} href={`/occasions/${slug}`}>
       <div className={styles.imgContainer}>
         {sold && (
           <Image

@@ -121,13 +121,17 @@ const deleteCar = async (req, res) => {
       return res.status(404).json({ message: "Car not found" });
     }
     for (const image of car.imagesPath) {
-      const imagePath = join(__dirname, "../public/assets/imgs", image);
+      const imagePath = join(
+        __dirname,
+        "../../client/public/assets/imgs",
+        image
+      );
       console.log("imagePath:", imagePath);
       if (fs.existsSync(imagePath)) {
         await deleteFile(imagePath);
       }
     }
-    await car.remove();
+    await car.deleteOne();
     res.json({ message: "Car deleted successfully" });
   } catch (err) {
     res.status(500).json({ message: err.message });

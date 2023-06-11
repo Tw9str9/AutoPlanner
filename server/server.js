@@ -7,6 +7,7 @@ const { createSeedUser, login } = require("./controllers/auth");
 const { addCar } = require("./controllers/cars");
 require("dotenv").config();
 const carRoutes = require("./routes/getCars");
+const updateCarRoutes = require("./routes/updateCar");
 
 // Middleware
 const app = express();
@@ -32,6 +33,7 @@ const upload = multer({ storage });
 app.post("/api/car/add", upload.array("images"), addCar);
 
 app.use("/api/cars", carRoutes);
+app.use("/api/car", updateCarRoutes);
 
 // Auth
 app.post("/api/login", login);
