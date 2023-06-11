@@ -1,14 +1,6 @@
 import CarDetails from "./CarDetails";
 
-export default function CarDetailsPage({ car, error }) {
-  // if (!car) {
-  //   return <NotFound>Car not found.</NotFound>;
-  // }
-
-  if (error) {
-    return <div>{error}</div>;
-  }
-
+export default function CarDetailsPage({ car }) {
   return <CarDetails car={car} />;
 }
 

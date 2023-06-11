@@ -6,12 +6,12 @@ export default function Services() {
     <section className={styles.services}>
       <div className="container">
         <h1>Diensten</h1>
-        <div className="service">
+        {/* <div className="service">
           <Link href="/contact">Voordelen</Link>
           <Link href="/contact">Garantie</Link>
           <Link href="/contact">Inkopen</Link>
           <Link href="/contact">Auto Importeren</Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
