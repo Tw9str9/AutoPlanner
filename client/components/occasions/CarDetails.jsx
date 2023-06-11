@@ -1,4 +1,5 @@
 import Slider from "@/components/widgets/Slider";
+import Map from "@/components/widgets/Map";
 import styles from "@/styles/CarDetails.module.css";
 import Image from "next/image";
 import {
@@ -55,17 +56,32 @@ export default function CarDetails({
       <div className="container">
         <div className={styles.row}>
           <div className={styles.sliderContainer}>
-            <Slider>
-              {imagesPath.map((img) => (
-                <div key={img} className={styles.imgContainer}>
-                  <Image
-                    src={`/assets/imgs/${img}`}
-                    alt={`${make} ${model}`}
-                    fill
-                  />
-                </div>
-              ))}
-            </Slider>
+            <div>
+              <Slider>
+                {imagesPath.map((img) => (
+                  <div key={img} className={styles.imgContainer}>
+                    <Image
+                      src={`/assets/imgs/${img}`}
+                      alt={`${make} ${model}`}
+                      fill
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+            <div className={styles.thumbs}>
+              <Slider>
+                {imagesPath.map((img) => (
+                  <div key={img} className={styles.imgContainer}>
+                    <Image
+                      src={`/assets/imgs/${img}`}
+                      alt={`${make} ${model}`}
+                      fill
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
           <div className={styles.carInfoCol}>
             <h1 className={styles.title}>
@@ -164,6 +180,7 @@ export default function CarDetails({
           <h2>Beschrijving</h2>
           <p>{desc}</p>
         </div>
+        <Map />
       </div>
     </section>
   );

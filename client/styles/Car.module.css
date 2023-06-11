@@ -4,6 +4,7 @@
   color: var(--c-neutral-900);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  scroll-snap-align: start;
   overflow: hidden;
 }
 @media (max-width: 991px) {

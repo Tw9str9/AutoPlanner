@@ -1,5 +1,6 @@
 import Car from "../widgets/Car";
 import styles from "@/styles/Home.module.css";
+import Slider from "../widgets/Slider";
 
 export default function Cars({ carList }) {
   return (
@@ -7,9 +8,11 @@ export default function Cars({ carList }) {
       <div className="container">
         <h1>Occasions</h1>
         <div className={styles.cars}>
-          {carList.map((carData, i) => (
-            <Car key={i} carData={carData} />
-          ))}
+          <Slider>
+            {carList.map((carData, i) => (
+              <Car key={i} carData={carData} />
+            ))}
+          </Slider>
         </div>
       </div>
     </section>

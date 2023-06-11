@@ -26,9 +26,16 @@
   scroll-snap-align: start;
   overflow: hidden;
 }
+.thumbs > div {
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+.thumbs .imgContainer {
+  flex: 0 0 calc(100% / 4);
+  border-radius: 4px;
+}
 .imgContainer img {
   object-fit: cover;
-  transition: 0.3s;
 }
 .carInfoCol {
   flex: 0 0 36%;
@@ -89,4 +96,6 @@
 }
 .desc p {
   white-space: pre-wrap;
+  font-weight: 300;
+  margin-bottom: 2rem;
 }
