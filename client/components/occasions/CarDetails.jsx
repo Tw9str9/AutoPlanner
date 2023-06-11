@@ -180,7 +180,6 @@ export default function CarDetails({
           <h2>Beschrijving</h2>
           <p>{desc}</p>
         </div>
-        <Map />
       </div>
     </section>
   );
