@@ -1,10 +1,11 @@
-import Form from "@/components/dashboard/Form";
+import Form from "@/pages/dashboard/add/Form";
 import { ArrowBack } from "@mui/icons-material";
-import styles from "@/styles/Dashboard.module.css";
 import { useRouter } from "next/router";
+import styles from "@/styles/Dashboard.module.css";
 
 export default function Add() {
   const router = useRouter();
+
   function handleButtonBack() {
     router.back();
   }

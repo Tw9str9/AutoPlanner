@@ -4,6 +4,7 @@ import ManageContent from "@/components/dashboard/ManageContent";
 import ManagePhotos from "@/components/dashboard/ManagePhotos";
 import ManageReviews from "@/components/dashboard/ManageReviews";
 import Menu from "@/components/dashboard/Menu";
+import { useRouter } from "next/router";
 import styles from "@/styles/Dashboard.module.css";
 
 export default function Dashboard({ carList }) {

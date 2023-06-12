@@ -9,41 +9,37 @@ import {
 import styles from "@/styles/Dashboard.module.css";
 
 export default function Menu({ setActive }) {
-  const handleComponentChange = (componentName) => {
-    setActive(componentName);
-  };
-
   return (
     <nav className={styles.sidebar}>
       <div>AutoPlanner</div>
       <ul>
         <span>Dashboard</span>
         <li>
-          <a href="#" onClick={() => handleComponentChange("ManageContent")}>
+          <a href="#" onClick={() => setActive("ManageContent")}>
             <ModeEditOutlineOutlined />
             <p>Inhoud bewerken</p>
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => handleComponentChange("ManageCars")}>
+          <a href="#" onClick={() => setActive("ManageCars")}>
             <DirectionsCarOutlined />
             <p>Occasions</p>
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => handleComponentChange("ManageReviews")}>
+          <a href="#" onClick={() => setActive("ManageReviews")}>
             <ChatOutlined />
             <p>Reviews</p>
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => handleComponentChange("ManagePhotos")}>
+          <a href="#" onClick={() => setActive("ManagePhotos")}>
             <CollectionsOutlined />
             <p>Foto's</p>
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="#">
             <HomeOutlined />
             <p>Homepagina</p>
           </a>
