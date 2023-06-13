@@ -113,6 +113,11 @@
 .services .servicesContainer a:where(:first-child, :last-child) {
   background-color: var(--c-primary-600);
 }
+@media (max-width: 767px) {
+  .services .servicesContainer a:nth-child(3) {
+    order: 3;
+  }
+}
 .services .servicesContainer a ul li {
   display: flex;
   align-items: center;
