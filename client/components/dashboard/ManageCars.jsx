@@ -40,9 +40,11 @@ export default function ManageCars({ carList }) {
     <div className={styles.manageCars}>
       <h1>Occasions beheren</h1>
       <div>
-        <Link className={styles.add} href="dashboard/add">
-          <AddBoxOutlined />
-        </Link>
+        <div className={styles.add}>
+          <Link href="dashboard/add">
+            <AddBoxOutlined />
+          </Link>
+        </div>
         {cars?.map((carData, i) => (
           <div key={i}>
             <Car carData={carData} />

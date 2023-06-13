@@ -20,7 +20,11 @@ const editPageContent = async (req, res) => {
       const fieldName = req.files[0].fieldname;
       const pageContent = await PageContent.find({});
       const oldImg = await pageContent[0][fieldName];
-      const imagePath = path.join(__dirname, "../public/assets/imgs/", oldImg);
+      const imagePath = path.join(
+        __dirname,
+        "../../client/public/assets/imgs/",
+        oldImg
+      );
       fs.unlink(imagePath, (err) => {
         if (err) {
           console.error(err);

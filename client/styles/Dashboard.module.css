@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
 /* Start Dashboard */
 .dashboard {
   display: flex;
@@ -49,7 +48,7 @@
 .sidebar:hover ul li {
   padding-left: 0px;
 }
-.sidebar ul li a {
+.sidebar ul li button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -58,34 +57,38 @@
   font-size: var(--font-s);
   width: 12rem;
   color: var(--c-secondary-700);
+  background: none;
+  border: none;
   font-weight: 500;
   text-decoration: none;
+  cursor: pointer;
   transition: 0.3s;
 }
-.sidebar:hover a {
+.sidebar:hover button {
   width: 100%;
 }
-.sidebar ul li a:hover {
+.sidebar ul li button:hover {
   background-color: var(--c-secondary-300);
   color: var(--c-secondary-900);
 }
-.sidebar ul li a svg {
+.sidebar ul li button svg {
   font-size: var(--font-m);
   transition: 0.3s;
 }
-.sidebar ul li a p {
+.sidebar ul li button p {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
+  font-family: "Oswald", sans-serif;
 }
-.sidebar:hover ul li a p {
+.sidebar:hover ul li button p {
   visibility: visible;
   opacity: 1;
 }
 .sidebar ul li:last-of-type {
   padding-top: 40px;
 }
-.sidebar ul li:last-of-type a {
+.sidebar ul li:last-of-type button {
   color: var(--c-primary-800);
 }
 /* End Menu */
@@ -122,15 +125,19 @@
     flex: 0 0 100%;
   }
 }
-.manageCars a.add {
+.dashboard .add {
   display: grid;
   place-content: center;
   flex: 0 0 100%;
-  padding: 4rem 0;
+  height: 8rem;
 }
-.add svg {
+.dashboard .add a svg {
   color: var(--c-primary-600);
   font-size: 4rem;
+  transition: 0.3s;
+}
+.dashboard .add a:hover svg {
+  color: var(--c-primary-700);
 }
 .manage {
   display: flex;
@@ -170,23 +177,6 @@
 /* Start Form */
 .addCar {
   padding: 2rem 0;
-}
-.addCar > div > button {
-  display: grid;
-  place-content: center;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 4px;
-  color: var(--c-primary-600);
-  background: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.addCar > div > button:hover {
-  color: var(--c-primary-700);
-}
-.addCar > div > button svg {
-  font-size: var(--font-xl);
 }
 .form {
   display: flex;

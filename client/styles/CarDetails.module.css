@@ -142,7 +142,7 @@
   font-weight: 600;
 }
 .desc {
-  padding: 1rem 0;
+  padding-top: 1rem;
 }
 .desc p {
   white-space: pre-wrap;
@@ -150,7 +150,7 @@
   padding: 2rem 0;
 }
 .location h2:last-of-type {
-  padding: 1rem 0;
+  padding-bottom: 1rem;
 }
 .location iframe {
   width: 100%;

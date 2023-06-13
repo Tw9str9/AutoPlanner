@@ -84,7 +84,6 @@ const addCar = async (req, res) => {
     desc,
     imagesPath,
   });
-  console.log(req.body);
   try {
     await car.save();
     res.status(201).json({ success: true, message: "Car saved" });
@@ -126,7 +125,6 @@ const deleteCar = async (req, res) => {
         "../../client/public/assets/imgs",
         image
       );
-      console.log("imagePath:", imagePath);
       if (fs.existsSync(imagePath)) {
         await deleteFile(imagePath);
       }

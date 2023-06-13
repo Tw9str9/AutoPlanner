@@ -5,9 +5,13 @@ const cors = require("cors");
 const helmet = require("helmet");
 const { createSeedUser, login } = require("./controllers/auth");
 const { addCar } = require("./controllers/cars");
-require("dotenv").config();
 const carRoutes = require("./routes/getCars");
 const updateCarRoutes = require("./routes/updateCar");
+const addReviewRoutes = require("./routes/addReview");
+const updateReviewRoutes = require("./routes/updateReview");
+const pageContentRoutes = require("./routes/getPageContent");
+const { editPageContent } = require("./controllers/pageContent");
+require("dotenv").config();
 
 // Middleware
 const app = express();
@@ -31,12 +35,20 @@ const upload = multer({ storage });
 
 // Cars
 app.post("/api/car/add", upload.array("images"), addCar);
-
 app.use("/api/cars", carRoutes);
 app.use("/api/car", updateCarRoutes);
 
+// Reviews
+app.use("/api/review", addReviewRoutes);
+app.use("/api/review", updateReviewRoutes);
+
+// PageContent
+app.patch("/api/pageContent/update", upload.any(), editPageContent);
+app.use("/api/pageContent", pageContentRoutes);
+
 // Auth
 app.post("/api/login", login);
+
 /* Seed User */
 app.get("/api/createSeedUser", createSeedUser);
 

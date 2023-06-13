@@ -8,7 +8,6 @@ const Breadcrumb = ({ make, slug }) => {
     .split("/")
     .filter((segment) => segment !== "");
   const shouldRenderBreadcrumb = router.pathname !== "/";
-
   return (
     shouldRenderBreadcrumb && (
       <div className="breadcrumb">
@@ -30,14 +29,19 @@ const Breadcrumb = ({ make, slug }) => {
                 slug === segment ? (segment = make) : segment;
               }
               if (segment.includes("?sort=")) return;
-              const formattedSegment = segment.replace(/-/g, " ");
+
+              const formattedSegment = () => {
+                if (segment.includes("#")) return segment.split("#")[0];
+                return segment.replace(/-/g, " ");
+              };
+
               return (
                 <li key={index}>
                   <ChevronRight />
                   <span>
                     <Link href={path}>
-                      {formattedSegment.charAt(0).toUpperCase() +
-                        formattedSegment.slice(1)}
+                      {formattedSegment().charAt(0).toUpperCase() +
+                        formattedSegment().slice(1)}
                     </Link>
                   </span>
                 </li>

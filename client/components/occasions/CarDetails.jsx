@@ -13,6 +13,7 @@ import {
 
 export default function CarDetails({
   car: {
+    slug,
     plate,
     price,
     make,
@@ -56,7 +57,7 @@ export default function CarDetails({
   return (
     <section className={styles.carDetails}>
       <div className="container">
-        <Panel />
+        <Panel slug={slug} make={make} />
         <div className={styles.row}>
           <div className={styles.leftCol}>
             <div>

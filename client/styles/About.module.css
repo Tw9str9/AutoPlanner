@@ -1,3 +1,25 @@
 .about {
   padding: var(--section-p);
+  color: var(--c-neutral-900);
+}
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.content p {
+  font-size: clamp(var(--font-s), 2vw, var(--font-m));
+}
+.mission {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mission h2 {
+  color: var(--c-primary-600);
+  font-size: clamp(var(--font-m), 3vw, var(--font-l));
 }

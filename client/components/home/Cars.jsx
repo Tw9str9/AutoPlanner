@@ -9,13 +9,17 @@ export default function Cars({ carList }) {
     <section className={styles.listings}>
       <div className="container">
         <h1>Occasions</h1>
-        <div className={styles.cars}>
-          <Slider>
-            {carList.map((carData, i) => (
-              <Car key={i} carData={carData} />
-            ))}
-          </Slider>
-        </div>
+        {!carList ? (
+          <div>Not Found</div>
+        ) : (
+          <div className={styles.cars}>
+            <Slider>
+              {carList.map((carData, i) => (
+                <Car key={i} carData={carData} />
+              ))}
+            </Slider>
+          </div>
+        )}
         <div className={styles.btn}>
           <Link href="/occasions">collectie bekijken</Link>
         </div>

@@ -6,49 +6,51 @@ import {
   ModeEditOutlineOutlined,
   DirectionsCarOutlined,
 } from "@mui/icons-material/";
+import { useRouter } from "next/router";
 import styles from "@/styles/Dashboard.module.css";
 
 export default function Menu({ setActive }) {
+  const router = useRouter();
   return (
     <nav className={styles.sidebar}>
       <div>AutoPlanner</div>
       <ul>
         <span>Dashboard</span>
         <li>
-          <a href="#" onClick={() => setActive("ManageContent")}>
+          <button onClick={() => setActive("ManageContent")}>
             <ModeEditOutlineOutlined />
             <p>Inhoud bewerken</p>
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#" onClick={() => setActive("ManageCars")}>
+          <button onClick={() => setActive("ManageCars")}>
             <DirectionsCarOutlined />
             <p>Occasions</p>
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#" onClick={() => setActive("ManageReviews")}>
+          <button onClick={() => setActive("ManageReviews")}>
             <ChatOutlined />
             <p>Reviews</p>
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#" onClick={() => setActive("ManagePhotos")}>
+          <button onClick={() => setActive("ManagePhotos")}>
             <CollectionsOutlined />
             <p>Foto's</p>
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#">
+          <button onClick={() => router.push("/")}>
             <HomeOutlined />
             <p>Homepagina</p>
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#">
+          <button>
             <LogoutOutlined />
             <p>Logout</p>
-          </a>
+          </button>
         </li>
       </ul>
     </nav>

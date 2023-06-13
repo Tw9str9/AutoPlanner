@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import ManageCars from "@/components/dashboard/ManageCars";
 import ManageContent from "@/components/dashboard/ManageContent";
 import ManagePhotos from "@/components/dashboard/ManagePhotos";
 import ManageReviews from "@/components/dashboard/ManageReviews";
 import Menu from "@/components/dashboard/Menu";
-import { useRouter } from "next/router";
 import styles from "@/styles/Dashboard.module.css";
 
 export default function Dashboard({ carList }) {
-  const [active, setActive] = useState("ManageContent");
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const storedValue = window.localStorage.getItem("manage");
+    if (storedValue) {
+      setActive(storedValue);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("manage", active);
+  }, [active]);
 
   const renderComponent = () => {
     switch (active) {
