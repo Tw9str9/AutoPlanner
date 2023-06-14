@@ -10,7 +10,7 @@
   gap: 2rem;
 }
 .content p {
-  font-size: clamp(var(--font-s), 2vw, var(--font-m));
+  font-size: var(--font-s);
 }
 .mission {
   display: flex;

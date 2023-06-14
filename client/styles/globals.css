@@ -9,7 +9,7 @@
   letter-spacing: 0.5px;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 :root {
   /* Colors */
