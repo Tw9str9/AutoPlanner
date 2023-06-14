@@ -14,7 +14,7 @@
   border-radius: 15px;
 }
 .services section:nth-of-type(2) {
-  background-color: var(--c-secondary-600);
+  background-color: var(--c-secondary-700);
 }
 .services .bundles {
   display: flex;

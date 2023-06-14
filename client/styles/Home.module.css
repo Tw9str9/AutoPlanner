@@ -200,6 +200,9 @@
   border-radius: 15px;
   scroll-snap-align: start;
 }
+.reviews .reviewsContainer > div:nth-child(even) {
+  background-color: var(--c-primary-600);
+}
 @media (max-width: 991px) {
   .reviews .reviewsContainer > div {
     flex: 0 0 calc(50% - 0.5rem);
