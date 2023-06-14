@@ -12,39 +12,41 @@ export default function Diensten() {
         <h1>Diensten</h1>
         <section id="garantie">
           <h2>Garantie</h2>
-          <div>
-            <h3>Uw nieuwe auto wordt standaard afgeleverd met:</h3>
-            <ul>
-              <li>Het volledige importproces</li>
-              <li>Geldige APK-keuring</li>
-              <li> RDW vrijwaringsbewijs van eventuele inruilauto</li>
-              <li>Tenaamstelling van de "nieuwe" auto</li>
-            </ul>
-            <p>
-              Zolang u in het bezit bent van de bij ons gekochte auto, repareert
-              onze garage deze bij storing of defect tegen een vooraf
-              afgesproken sterk gereduceerd tarief. Indien beschikbaar krijgt u
-              na het maken van een afspraak een gratis leenauto.
-            </p>
-          </div>
-          <div>
-            <p>
-              Wij hebben vertrouwen in onze auto's en staan voor onze kennis en
-              vaardigheden als autoinkopers. Wanneer een auto rijklaar wordt
-              gemaakt voor aflevering, is dat echter een momentopname. Daarom
-              bieden wij u 12 weken garantie aan, omdat wij willen dat u 100%
-              tevreden bent!
-            </p>
-            <ul>
-              <li>12 weken garantie op de motor en versnellingsbak</li>
-              <li>Maximale gereden afstand van 10.000 km</li>
-            </ul>
-            <p>
-              De garantie omvat uitsluitend de nokkenas, kleppen,
-              distributieriem, cilinderkop, koppakking, zuigers, zuigerveren,
-              oliepomp, de complete krukas, en alle versnellingen en
-              synchromeshes.
-            </p>
+          <div className={styles.bundles}>
+            <div>
+              <h3>Uw nieuwe auto wordt standaard afgeleverd met:</h3>
+              <ul>
+                <li>Het volledige importproces</li>
+                <li>Geldige APK-keuring</li>
+                <li> RDW vrijwaringsbewijs van eventuele inruilauto</li>
+                <li>Tenaamstelling van de "nieuwe" auto</li>
+              </ul>
+              <p>
+                Zolang u in het bezit bent van de bij ons gekochte auto,
+                repareert onze garage deze bij storing of defect tegen een
+                vooraf afgesproken sterk gereduceerd tarief. Indien beschikbaar
+                krijgt u na het maken van een afspraak een gratis leenauto.
+              </p>
+            </div>
+            <div>
+              <p>
+                Wij hebben vertrouwen in onze auto's en staan voor onze kennis
+                en vaardigheden als autoinkopers. Wanneer een auto rijklaar
+                wordt gemaakt voor aflevering, is dat echter een momentopname.
+                Daarom bieden wij u 12 weken garantie aan, omdat wij willen dat
+                u 100% tevreden bent!
+              </p>
+              <ul>
+                <li>12 weken garantie op de motor en versnellingsbak</li>
+                <li>Maximale gereden afstand van 10.000 km</li>
+              </ul>
+              <p>
+                De garantie omvat uitsluitend de nokkenas, kleppen,
+                distributieriem, cilinderkop, koppakking, zuigers, zuigerveren,
+                oliepomp, de complete krukas, en alle versnellingen en
+                synchromeshes.
+              </p>
+            </div>
           </div>
         </section>
         <section id="inkopen">
@@ -63,11 +65,13 @@ export default function Diensten() {
             en de auto ter plekke vrijwaren. En dit alles geheel gratis en
             vrijblijvend!
           </p>
-          <ContactInfo whatsapp email />
+          <div className={styles.contact}>
+            <ContactInfo whatsapp email />
+          </div>
         </section>
         <section id="importeren">
           <h2>Auto importeren</h2>
-          <div>
+          <div className={styles.features}>
             <p>
               Hulp nodig bij het importeren van een auto uit Duitsland of
               België? Bent u van plan om een auto te kopen in het buitenland en
@@ -79,36 +83,76 @@ export default function Diensten() {
               importservice. Kies uit één van onze importpakketten en u bent er
               van verzekerd dat u zo snel mogelijk met uw auto de weg op kunt.
             </p>
-            <h3>Onze voordelen op een rij:</h3>
-            <ul>
-              <li>RDW keuring binnen 24 uur (versneld traject)</li>
-              <li>BPM-aangifteformulier</li>
-              <li>Wij komen langs op locatie</li>
-              <li>Wij bieden de voordeligste pakketprijzen</li>
-              <li>Wij nemen het gehele importtraject uit handen</li>
-              <li>Altijd levering van luxe kentekenplaten</li>
-            </ul>
-          </div>
-          <div>
             <div>
-              <h3>All in pakket</h3>
-            </div>
-            <div>
-              <h3>All in pakket</h3>
-            </div>
-            <div>
-              <h3>All in pakket</h3>
+              <h3>Onze voordelen op een rij:</h3>
+              <ul>
+                <li>RDW keuring binnen 24 uur (versneld traject)</li>
+                <li>BPM-aangifteformulier</li>
+                <li>Wij komen langs op locatie</li>
+                <li>Wij bieden de voordeligste pakketprijzen</li>
+                <li>Wij nemen het gehele importtraject uit handen</li>
+                <li>Altijd levering van luxe kentekenplaten</li>
+              </ul>
             </div>
           </div>
-          <p>
-            *De legeskosten/recyclingsbijdrage van de RDW (132 euro) en de
-            BPM-aangifte (28,50 euro) zijn niet inbegrepen, alle benoemde
-            prijzen zijn exclusief btw. **Transport van de geïmporteerde auto
-            tot 350 km vanaf Utrecht. Bij afstanden daarboven wordt een ander
-            tarief berekend. Neem contact met ons op voor het exacte bedrag.
-          </p>
+          <div className={styles.bundles}>
+            <div>
+              <h3>All in pakket</h3>
+              <ul>
+                <li>Dossier in orde maken</li>
+                <li>Aanvraag indienen bij RDW</li>
+                <li>BPM-tarief met laagste bpm-garantie berekenen</li>
+                <li>BPM-aangifte bij belastingdienst</li>
+                <li>Levering van luxe kentekenplaten</li>
+              </ul>
+              <div>200 eur</div>
+            </div>
+            <div>
+              <h3>All-in pakket Plus</h3>
+              <ul>
+                <li>Dossier in orde maken</li>
+                <li>Aanvraag indienen bij RDW</li>
+                <li>
+                  BPM-tarief met laagste bpm-garantie berekenen op basis van
+                  taxatierapport
+                </li>
+                <li>BPM-aangifte bij belastingdienst</li>
+                <li>Levering van luxe kentekenplaten</li>
+              </ul>
+              <div>200 eur</div>
+            </div>
+          </div>
+          <div className={styles.features}>
+            <div>
+              <h3>All-in pakket Premium</h3>
+              <ul>
+                <li>Dossier in orde maken</li>
+                <li>Aanvraag indienen bij RDW</li>
+                <li>
+                  BPM-tarief met laagste bpm-garantie berekenen op basis van
+                  taxatierapport
+                </li>
+                <li>BPM-aangifte bij belastingdienst</li>
+                <li>Levering van luxe kentekenplaten</li>
+                <li> Transport van de geïmporteerde auto**</li>
+              </ul>
+              <div>200 eur</div>
+            </div>
+            <p>
+              *De legeskosten/recyclingsbijdrage van de RDW (132 euro) en de
+              BPM-aangifte (28,50 euro) zijn niet inbegrepen, alle benoemde
+              prijzen zijn exclusief btw.
+              <br />
+              **Transport van de geïmporteerde auto tot 350 km vanaf Utrecht.
+              Bij afstanden daarboven wordt een ander tarief berekend. Neem
+              contact met ons op voor het exacte bedrag.
+            </p>
+          </div>
         </section>
-        <Social />
+        <div className={styles.social}>
+          <h2>Volg ons</h2>
+          <Social />
+        </div>
         <Map />
       </div>
     </section>
