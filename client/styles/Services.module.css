@@ -36,3 +36,6 @@
   background-image: url("../public/check-circle-orange.svg");
   background-size: cover;
 }
+.services > div > div > iframe {
+  width: 100%;
+}
