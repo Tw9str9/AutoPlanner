@@ -4,11 +4,11 @@ import styles from "@/styles/Social.module.css";
 export default function Social() {
   return (
     <ul className={styles.social}>
-      <li>
+      {/* <li>
         <Link href="https://www.facebook.com/AutoplanNL" target="_blank">
           <Facebook /> Facebook
         </Link>
-      </li>
+      </li> */}
       <li>
         <Link href="https://www.instagram.com/autoplannernl/" target="_blank">
           <Instagram /> Instagram

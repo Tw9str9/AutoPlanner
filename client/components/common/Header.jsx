@@ -3,7 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import ContactInfo from "../widgets/ContactInfo";
-import { Menu, Close, LocationOn, PhoneInTalk } from "@mui/icons-material";
+import {
+  Menu,
+  Close,
+  LocationOn,
+  PhoneInTalk,
+  WhatsApp,
+} from "@mui/icons-material";
 
 export default function Header() {
   const [isMenuVisible, setMenuVisible] = useState(false);
@@ -17,7 +23,7 @@ export default function Header() {
     <header>
       <div className="header-top">
         <div className="container">
-          <ContactInfo time address />
+          <ContactInfo time address whatsapp />
         </div>
       </div>
       <div className="header-bottom">
@@ -26,8 +32,8 @@ export default function Header() {
             <Image
               src="/logo.svg"
               alt="Autoplannernederland Logo"
-              width={200}
-              height={80}
+              width={240}
+              height={120}
             />
           </Link>
           <nav>
@@ -40,6 +46,9 @@ export default function Header() {
               </Link>
               <Link href="tel:+31172255475">
                 <PhoneInTalk />
+              </Link>
+              <Link href="https://wa.me/31681787861" target="_blank">
+                <WhatsApp />
               </Link>
             </div>
             <button aria-label="Menu aan" onClick={handleMenuToggle}>

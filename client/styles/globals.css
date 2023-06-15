@@ -19,7 +19,7 @@ html {
   --c-primary-300: #fdba74;
   --c-primary-400: #fb923c;
   --c-primary-500: #f97316;
-  --c-primary-600: #ea580c;
+  --c-primary-600: #ec673b;
   --c-primary-700: #c2410c;
   --c-primary-800: #9a3412;
   --c-primary-900: #7c2d12;
@@ -29,8 +29,8 @@ html {
   --c-secondary-300: #d1d5db;
   --c-secondary-400: #9ca3af;
   --c-secondary-500: #6b7280;
-  --c-secondary-600: #4b5563;
-  --c-secondary-700: #374151;
+  --c-secondary-600: #333;
+  --c-secondary-700: #3e3e3e;
   --c-secondary-800: #1f2937;
   --c-secondary-900: #111827;
   --c-neutral-50: #fafafa;
@@ -95,11 +95,6 @@ a {
 /* Start Header */
 header .header-top {
   background-color: var(--c-secondary-700);
-  background: linear-gradient(
-    45deg,
-    var(--c-secondary-100) 32%,
-    var(--c-secondary-700) 32%
-  );
   padding: 1rem;
   color: var(--c-neutral-50);
 }
@@ -136,14 +131,6 @@ header .header-bottom .container {
   justify-content: space-between;
   align-items: center;
   position: relative;
-}
-@media (min-width: 992px) {
-  .header-bottom .container > a img {
-    position: absolute;
-    left: 0;
-    top: -50%;
-    transform: translateY(-50%);
-  }
 }
 .header-bottom .container nav {
   display: flex;
@@ -273,9 +260,8 @@ footer .footer-top .container .partners .img-container {
 footer .footer-top .container .partners .img-container:nth-child(3) {
   aspect-ratio: 1/1;
 }
-footer .footer-top .container .partners .img-container:nth-child(4) {
-  aspect-ratio: 4/1;
-  flex: 0 0 160px;
+footer .footer-top .container .partners .img-container img {
+  object-fit: contain;
 }
 footer .footer-bottom {
   padding: 1rem;

@@ -19,9 +19,6 @@ export default function Footer() {
               <Image src="/sbb-beeldmerk-fc.gif" alt="sbb-beeldmerk-fc" fill />
             </div>
             <div className="img-container">
-              <Image src="/erkend.png" alt="erkend" fill />
-            </div>
-            <div className="img-container">
               <Image src="/nap-logo.png" alt="nap" fill />
             </div>
           </div>
