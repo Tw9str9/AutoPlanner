@@ -31,6 +31,9 @@
   justify-content: center;
   gap: 0.5rem;
 }
+.contactCol address {
+  font-style: normal;
+}
 .contactCol :where(a, p) svg {
   transition: 0.3s;
 }

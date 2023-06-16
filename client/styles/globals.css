@@ -115,6 +115,9 @@ header .header-top .container :where(a, p) {
   justify-content: center;
   gap: 0.25rem;
 }
+header .header-top .container address {
+  font-style: normal;
+}
 header .header-top .container :where(a, p) svg {
   transition: 0.3s;
 }
@@ -122,48 +125,69 @@ header .header-top .container :where(a, p):hover svg {
   transform: scale(1.1);
   color: var(--c-primary-600);
 }
-header .header-bottom {
-  padding: 1rem;
-  background-color: var(--c-secondary-100);
-}
-header .header-bottom .container {
+header .header-bottom .logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  header .header-bottom .logo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+header .header-bottom a img {
+  padding: 1rem;
+}
+header .header-bottom .img-container {
   position: relative;
+  flex: 0 0 50%;
+  width: 100%;
+  aspect-ratio: 7;
 }
-.header-bottom .container nav {
+@media (max-width: 1199px) {
+  header .header-bottom .img-container {
+    aspect-ratio: 6;
+  }
+}
+@media (max-width: 400px) {
+  header .header-bottom .img-container {
+    aspect-ratio: 3;
+  }
+}
+.header-bottom nav {
+  position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--c-neutral-100);
 }
-.header-bottom .container nav ul {
+.header-bottom nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
 @media (min-width: 992px) {
-  .header-bottom .container nav :where(button, .contact) {
+  .header-bottom nav :where(button, .contact) {
     display: none;
   }
 }
-
 @media (max-width: 991px) {
-  .header-bottom .container > a img {
-    width: 152px;
-  }
-  .header-bottom .container nav {
+  .header-bottom nav {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
   }
-  .header-bottom .container .contact {
+  .header-bottom .contact {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
   }
-  .header-bottom .container .contact a {
+  .header-bottom .contact a {
     padding: 2px;
     border-radius: 4px;
     display: grid;
@@ -171,18 +195,18 @@ header .header-bottom .container {
     cursor: pointer;
     transition: 0.3s;
   }
-  .header-bottom .container .contact a:hover {
+  .header-bottom .contact a:hover {
     background-color: var(--c-secondary-700);
   }
-  .header-bottom .container .contact a svg {
+  .header-bottom .contact a svg {
     font-size: var(--font-l);
     color: var(--c-secondary-700);
     transition: 0.3s;
   }
-  .header-bottom .container .contact a:hover svg {
+  .header-bottom .contact a:hover svg {
     color: var(--c-primary-600);
   }
-  .header-bottom .container nav button {
+  .header-bottom nav button {
     border: none;
     background-color: var(--c-secondary-700);
     padding: 2px;
@@ -191,15 +215,15 @@ header .header-bottom .container {
     place-content: center;
     cursor: pointer;
   }
-  .header-bottom .container nav button svg {
+  .header-bottom nav button svg {
     color: var(--c-neutral-50);
     font-size: var(--font-l);
     transition: 0.3s;
   }
-  .header-bottom .container nav button:hover svg {
+  .header-bottom nav button:hover svg {
     color: var(--c-primary-600);
   }
-  .header-bottom .container nav ul {
+  .header-bottom nav ul {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -207,31 +231,31 @@ header .header-bottom .container {
     background-color: var(--c-secondary-700);
     border-bottom: 4px solid var(--c-primary-600);
     position: absolute;
-    top: 120px;
+    top: 0;
     right: 0;
     z-index: 10;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
   }
-  .header-bottom .container nav ul.visible {
-    top: 101px;
+  .header-bottom nav ul.visible {
+    top: 68px;
     opacity: 1;
     visibility: visible;
   }
 }
-.header-bottom .container nav ul li a {
+.header-bottom nav ul li a {
   text-transform: uppercase;
   font-weight: 600;
   color: var(--c-neutral-900);
   transition: 0.3s;
 }
 @media (max-width: 991px) {
-  .header-bottom .container nav ul li a {
+  .header-bottom nav ul li a {
     color: var(--c-neutral-50);
   }
 }
-.header-bottom .container nav ul li a:where(.active, :hover) {
+.header-bottom nav ul li a:where(.active, :hover) {
   color: var(--c-primary-600);
 }
 /* End Header */
@@ -293,6 +317,9 @@ footer .footer-bottom .container .contact-info :where(a, p) {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+footer .footer-bottom .container .contact-info address {
+  font-style: normal;
 }
 footer .footer-bottom .container .contact-info :where(a, p) svg {
   transition: 0.3s;

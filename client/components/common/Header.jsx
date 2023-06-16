@@ -27,77 +27,76 @@ export default function Header() {
         </div>
       </div>
       <div className="header-bottom">
-        <div className="container">
-          <Link href="/">
-            <Image
-              src="/logo.svg"
-              alt="Autoplannernederland Logo"
-              width={240}
-              height={120}
-            />
+        <div className="logo">
+          <Link href="/" className="img-container">
+            <Image src="/logo.svg" alt="Autoplannernederland Logo" fill />
           </Link>
-          <nav>
-            <div className="contact">
-              <Link
-                href="https://goo.gl/maps/sLNV5CeqcpGTNWjY7"
-                target="_blank"
-              >
-                <LocationOn />
-              </Link>
-              <Link href="tel:+31172255475">
-                <PhoneInTalk />
-              </Link>
-              <Link href="https://wa.me/31681787861" target="_blank">
-                <WhatsApp />
-              </Link>
-            </div>
-            <button aria-label="Menu aan" onClick={handleMenuToggle}>
-              {isMenuVisible ? <Close /> : <Menu />}
-            </button>
-            <ul className={isMenuVisible ? "visible" : ""}>
-              <li>
-                <Link
-                  href="/"
-                  className={router.pathname === "/" ? "active" : ""}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/occasions"
-                  className={router.pathname === "/ocassions" ? "active" : ""}
-                >
-                  Occasions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/diensten"
-                  className={router.pathname === "/diensten" ? "active" : ""}
-                >
-                  Diensten
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/over-ons"
-                  className={router.pathname === "/over-ons" ? "active" : ""}
-                >
-                  Over Ons
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className={router.pathname === "/contact" ? "active" : ""}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          <div className="img-container">
+            <Image
+              src="/reward_auto.jpg"
+              alt="Autoplannernederland Logo"
+              fill
+            />
+          </div>
         </div>
+        <nav>
+          <div className="contact">
+            <Link href="https://goo.gl/maps/sLNV5CeqcpGTNWjY7" target="_blank">
+              <LocationOn />
+            </Link>
+            <Link href="tel:+31172255475">
+              <PhoneInTalk />
+            </Link>
+            <Link href="https://wa.me/31681787861" target="_blank">
+              <WhatsApp />
+            </Link>
+          </div>
+          <button aria-label="Menu aan" onClick={handleMenuToggle}>
+            {isMenuVisible ? <Close /> : <Menu />}
+          </button>
+          <ul className={isMenuVisible ? "visible" : ""}>
+            <li>
+              <Link
+                href="/"
+                className={router.pathname === "/" ? "active" : ""}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/occasions"
+                className={router.pathname === "/ocassions" ? "active" : ""}
+              >
+                Occasions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/diensten"
+                className={router.pathname === "/diensten" ? "active" : ""}
+              >
+                Diensten
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/over-ons"
+                className={router.pathname === "/over-ons" ? "active" : ""}
+              >
+                Over Ons
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className={router.pathname === "/contact" ? "active" : ""}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );
