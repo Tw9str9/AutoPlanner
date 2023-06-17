@@ -14,6 +14,9 @@ export default function Diensten() {
           <h2>Garantie</h2>
           <div className={styles.bundles}>
             <div>
+              <span>Standaard</span>
+              <span>Gratis</span>
+              <span></span>
               <h3>Uw nieuwe auto wordt standaard afgeleverd met:</h3>
               <ul>
                 <li>Het volledige importproces</li>
@@ -29,6 +32,9 @@ export default function Diensten() {
               </p>
             </div>
             <div>
+              <span>Garantiepakket<small>(extra optie)</small></span>
+              <span>€ 494</span>
+              <span></span>
               <p>
                 Wij hebben vertrouwen in onze auto's en staan voor onze kennis
                 en vaardigheden als autoinkopers. Wanneer een auto rijklaar
@@ -105,7 +111,7 @@ export default function Diensten() {
                 <li>BPM-aangifte bij belastingdienst</li>
                 <li>Levering van luxe kentekenplaten</li>
               </ul>
-              <div>200 eur</div>
+              <div>€129,50</div>
             </div>
             <div>
               <h3>All-in pakket Plus</h3>
@@ -119,7 +125,7 @@ export default function Diensten() {
                 <li>BPM-aangifte bij belastingdienst</li>
                 <li>Levering van luxe kentekenplaten</li>
               </ul>
-              <div>200 eur</div>
+              <div>€349,50</div>
             </div>
           </div>
           <div className={styles.features}>
@@ -136,7 +142,7 @@ export default function Diensten() {
                 <li>Levering van luxe kentekenplaten</li>
                 <li> Transport van de geïmporteerde auto**</li>
               </ul>
-              <div>200 eur</div>
+              <div>€749,50</div>
             </div>
             <p>
               *De legeskosten/recyclingsbijdrage van de RDW (132 euro) en de

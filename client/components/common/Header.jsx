@@ -32,8 +32,8 @@ export default function Header() {
             <Image
               src="/logo.svg"
               alt="Autoplannernederland Logo"
-              width={200}
-              height={80}
+              width={256}
+              height={112}
             />
           </Link>
           <nav>

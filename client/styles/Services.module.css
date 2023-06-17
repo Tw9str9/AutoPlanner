@@ -29,6 +29,31 @@
     flex-direction: column;
   }
 }
+.services .bundles > div {
+  position: relative;
+}
+.services .bundles > div > span:first-of-type {
+  font-weight: 600;
+  align-self: center;
+}
+.services .bundles > div > span:nth-of-type(2) {
+  position: relative;
+  z-index: 1;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  background-color: var(--c-primary-600);
+  align-self: center;
+}
+.services .bundles > div > span:last-of-type {
+  content: "";
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--c-neutral-200);
+}
 .services section .features {
   display: flex;
   align-items: flex-start;
@@ -94,6 +119,14 @@
   height: 24px;
   background-image: url("../public/check-circle-orange.svg");
   background-size: cover;
+}
+.services .bundles div > div,
+.services .features div > div {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: clamp(var(--font-s), 2vw, var(--font-m));
+  background-color: var(--c-primary-600);
 }
 .services .social {
   padding: 2rem 0 3rem;

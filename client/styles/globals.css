@@ -139,8 +139,9 @@ header .header-bottom .container {
   .header-bottom .container > a img {
     position: absolute;
     left: 0;
-    top: -50%;
-    transform: translateY(-50%);
+    bottom: -14px;
+    z-index: 10;
+    filter: drop-shadow(1px 1px 0px black);
   }
 }
 .header-bottom .container nav {
