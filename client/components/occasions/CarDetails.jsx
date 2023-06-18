@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Panel from "@/components/widgets/Panel";
 import Slider from "@/components/widgets/Slider";
 import ContactInfo from "@/components/widgets/ContactInfo";
@@ -40,6 +41,8 @@ export default function CarDetails({
     desc,
   },
 }) {
+  const [currentImg, setCurrentImg] = useState(1);
+
   // Price + KM Options
   const priceOptions = {
     style: "currency",
@@ -54,6 +57,10 @@ export default function CarDetails({
 
   const formatter = new Intl.NumberFormat("nl-NL", kmOptions);
 
+  function handleImgClick(i) {
+    setCurrentImg(i + 1);
+  }
+
   return (
     <section className={styles.carDetails}>
       <div className="container">
@@ -61,7 +68,7 @@ export default function CarDetails({
         <div className={styles.row}>
           <div className={styles.leftCol}>
             <div className={styles.sliderContainer}>
-              <Slider>
+              <Slider currentImg={currentImg} totalImgs={imagesPath.length}>
                 {imagesPath.map((img) => (
                   <div key={img} className={styles.imgContainer}>
                     <Image
@@ -75,12 +82,13 @@ export default function CarDetails({
             </div>
             <div className={styles.thumbs}>
               <Slider>
-                {imagesPath.map((img) => (
+                {imagesPath.map((img, i) => (
                   <div key={img} className={styles.imgContainer}>
                     <Image
                       src={`/assets/imgs/${img}`}
                       alt={`${make} ${model}`}
                       fill
+                      onClick={() => handleImgClick(i)}
                     />
                   </div>
                 ))}

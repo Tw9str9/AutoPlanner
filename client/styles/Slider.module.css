@@ -20,10 +20,26 @@
 .slider > button svg {
   color: var(--c-primary-600);
   font-size: var(--font-l);
+  transition: 0.3s;
+}
+.slider > button:hover svg {
+  color: var(--c-primary-700);
 }
 .slider > button:first-of-type {
   left: 4px;
 }
 .slider > button:last-of-type {
   right: 4px;
+}
+.imgCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+  color: var(--c-primary-600);
 }
