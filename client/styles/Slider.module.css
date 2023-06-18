@@ -9,3 +9,21 @@
 .slider::-webkit-scrollbar {
   display: none;
 }
+.slider > button {
+  position: absolute;
+  z-index: 2;
+  padding: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.slider > button svg {
+  color: var(--c-primary-600);
+  font-size: var(--font-l);
+}
+.slider > button:first-of-type {
+  left: 4px;
+}
+.slider > button:last-of-type {
+  right: 4px;
+}

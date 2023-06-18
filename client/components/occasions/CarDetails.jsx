@@ -60,7 +60,7 @@ export default function CarDetails({
         <Panel slug={slug} make={make} />
         <div className={styles.row}>
           <div className={styles.leftCol}>
-            <div>
+            <div className={styles.sliderContainer}>
               <Slider>
                 {imagesPath.map((img) => (
                   <div key={img} className={styles.imgContainer}>

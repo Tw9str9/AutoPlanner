@@ -32,7 +32,7 @@ export default function Diensten() {
               </p>
             </div>
             <div>
-              <span>Garantiepakket<small>(extra optie)</small></span>
+              <span>Garantiepakket <small>(extra optie)</small></span>
               <span>€ 494</span>
               <span></span>
               <p>
@@ -111,7 +111,7 @@ export default function Diensten() {
                 <li>BPM-aangifte bij belastingdienst</li>
                 <li>Levering van luxe kentekenplaten</li>
               </ul>
-              <div>€129,50</div>
+              <div>€ 129,50</div>
             </div>
             <div>
               <h3>All-in pakket Plus</h3>
@@ -125,7 +125,7 @@ export default function Diensten() {
                 <li>BPM-aangifte bij belastingdienst</li>
                 <li>Levering van luxe kentekenplaten</li>
               </ul>
-              <div>€349,50</div>
+              <div>€ 349,50</div>
             </div>
           </div>
           <div className={styles.features}>
@@ -142,7 +142,7 @@ export default function Diensten() {
                 <li>Levering van luxe kentekenplaten</li>
                 <li> Transport van de geïmporteerde auto**</li>
               </ul>
-              <div>€749,50</div>
+              <div>€ 749,50</div>
             </div>
             <p>
               *De legeskosten/recyclingsbijdrage van de RDW (132 euro) en de

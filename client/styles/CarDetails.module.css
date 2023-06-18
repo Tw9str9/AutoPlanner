@@ -19,6 +19,9 @@
     width: 100%;
   }
 }
+.sliderContainer {
+  position: relative;
+}
 .imgContainer {
   position: relative;
   aspect-ratio: 16/9;
@@ -30,6 +33,9 @@
 .thumbs > div {
   gap: 0.25rem;
   margin-top: 0.25rem;
+}
+.thumbs > div > button {
+  display: none;
 }
 .thumbs .imgContainer {
   flex: 0 0 calc(25% - 0.75rem / 4);

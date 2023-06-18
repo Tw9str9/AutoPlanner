@@ -2,7 +2,6 @@ import Car from "../widgets/Car";
 import Slider from "../widgets/Slider";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
-import Social from "../widgets/Social";
 
 export default function Cars({ carList }) {
   return (
