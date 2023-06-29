@@ -10,7 +10,7 @@ export default function Contact() {
   }
 
   return (
-    <section className={styles.conactPage}>
+    <section className={styles.contactPage}>
       <div className="container">
         <Panel />
         <h1>Contact opnemen</h1>

@@ -6,7 +6,7 @@ import ManageReviews from "@/components/dashboard/ManageReviews";
 import Menu from "@/components/dashboard/Menu";
 import styles from "@/styles/Dashboard.module.css";
 
-export default function Dashboard({ carList }) {
+export default function Dashboard({ carList, reviewList }) {
   const [active, setActive] = useState("");
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function Dashboard({ carList }) {
       case "ManageCars":
         return <ManageCars carList={carList} />;
       case "ManageReviews":
-        return <ManageReviews />;
+        return <ManageReviews reviewList={reviewList} />;
       case "ManagePhotos":
         return <ManagePhotos />;
       default:
@@ -52,7 +52,7 @@ export async function getServerSideProps() {
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/cars`
     );
     const reviewsResponse = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/cars`
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/review`
     );
 
     const carList = await carsResponse.json();

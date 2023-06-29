@@ -1,0 +1,43 @@
+.review {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  flex: 0 0 calc(100% / 3 - 2rem / 3);
+  height: 18rem;
+  background-color: var(--c-secondary-700);
+  border-radius: 15px;
+  scroll-snap-align: start;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.review::-webkit-scrollbar {
+  display: none;
+}
+.review:nth-child(even) {
+  background-color: var(--c-primary-600);
+}
+@media (max-width: 991px) {
+  .review {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+@media (max-width: 767px) {
+  .review {
+    flex: 0 0 100%;
+  }
+}
+.review .date {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 13px;
+  color: var(--c-neutral-300);
+}
+.review .message {
+  text-align: center;
+  width: 100%;
+}

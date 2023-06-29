@@ -1,11 +1,12 @@
 const Review = require("../models/review");
 
 const addReview = async (req, res) => {
-  const { name, review } = req.body;
+  const { name, email, message } = req.body;
 
   const newReview = new Review({
     name,
-    review,
+    email,
+    message,
   });
   try {
     await newReview.save();
@@ -51,7 +52,7 @@ const deleteReview = async (req, res) => {
     if (!review) {
       return res.status(404).json({ message: "Review not found" });
     }
-    await review.remove();
+    await review.deleteOne();
     res.json({ message: "Review deleted successfully" });
   } catch (err) {
     console.error(err.message);

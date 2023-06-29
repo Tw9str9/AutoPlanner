@@ -56,6 +56,7 @@ export default function Header() {
                 <Link
                   href="/"
                   className={router.pathname === "/" ? "active" : ""}
+                  onClick={handleMenuToggle}
                 >
                   Home
                 </Link>
@@ -64,6 +65,7 @@ export default function Header() {
                 <Link
                   href="/occasions"
                   className={router.pathname === "/ocassions" ? "active" : ""}
+                  onClick={handleMenuToggle}
                 >
                   Occasions
                 </Link>
@@ -72,14 +74,25 @@ export default function Header() {
                 <Link
                   href="/diensten"
                   className={router.pathname === "/diensten" ? "active" : ""}
+                  onClick={handleMenuToggle}
                 >
                   Diensten
                 </Link>
               </li>
               <li>
                 <Link
+                  href="/reviews"
+                  className={router.pathname === "/reviews" ? "active" : ""}
+                  onClick={handleMenuToggle}
+                >
+                  Reviews
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/over-ons"
                   className={router.pathname === "/over-ons" ? "active" : ""}
+                  onClick={handleMenuToggle}
                 >
                   Over Ons
                 </Link>
@@ -88,6 +101,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   className={router.pathname === "/contact" ? "active" : ""}
+                  onClick={handleMenuToggle}
                 >
                   Contact
                 </Link>

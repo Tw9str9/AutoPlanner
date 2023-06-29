@@ -4,13 +4,13 @@ import Reviews from "@/components/home/Reviews";
 import Gallery from "@/components/home/Gallery";
 import Cars from "@/components/home/Cars";
 
-export default function Home({ carList }) {
+export default function Home({ carList, reviewList }) {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <Cars carList={carList} />
       <Services />
-      <Reviews />
+      <Reviews reviewList={reviewList} />
       <Gallery />
     </>
   );
@@ -25,7 +25,7 @@ export async function getServerSideProps() {
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/cars`
     );
     const reviewsResponse = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/cars`
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/review`
     );
 
     const carList = await carsResponse.json();
